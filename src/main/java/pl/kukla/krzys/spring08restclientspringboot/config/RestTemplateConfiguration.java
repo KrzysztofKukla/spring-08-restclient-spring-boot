@@ -1,6 +1,5 @@
 package pl.kukla.krzys.spring08restclientspringboot.config;
 
-import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.client.RestTemplate;
@@ -12,9 +11,13 @@ import org.springframework.web.client.RestTemplate;
 public class RestTemplateConfiguration {
 
     //RestTemplateBuilder is autoconfigured for us
+//    @Bean
+//    public RestTemplate restTemplate(RestTemplateBuilder restTemplateBuilder) {
+//        return restTemplateBuilder.build();
+//    }
     @Bean
-    public RestTemplate restTemplate(RestTemplateBuilder restTemplateBuilder) {
-        return restTemplateBuilder.build();
+    public RestTemplate restTemplate() {
+        return new RestTemplate();
     }
 
 }
