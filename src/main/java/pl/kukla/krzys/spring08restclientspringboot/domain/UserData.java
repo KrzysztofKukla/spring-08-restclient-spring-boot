@@ -16,6 +16,6 @@ import java.util.List;
 @Builder
 public class UserData {
 
-    private List<UserData> data;
+    private List<User> data;
 
 }

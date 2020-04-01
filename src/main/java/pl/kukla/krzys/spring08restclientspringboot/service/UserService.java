@@ -1,6 +1,6 @@
 package pl.kukla.krzys.spring08restclientspringboot.service;
 
-import pl.kukla.krzys.spring08restclientspringboot.domain.UserData;
+import pl.kukla.krzys.spring08restclientspringboot.domain.User;
 
 import java.util.List;
 
@@ -9,6 +9,6 @@ import java.util.List;
  */
 public interface UserService {
 
-    List<UserData> findAll(Integer limit);
+    List<User> findAll(Integer limit);
 
 }

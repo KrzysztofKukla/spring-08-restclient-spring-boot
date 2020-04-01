@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponents;
 import org.springframework.web.util.UriComponentsBuilder;
+import pl.kukla.krzys.spring08restclientspringboot.domain.User;
 import pl.kukla.krzys.spring08restclientspringboot.domain.UserData;
 
 import java.util.List;
@@ -25,7 +26,7 @@ public class UserServiceImpl implements UserService {
     private final String apiUrl;
 
     @Override
-    public List<UserData> findAll(Integer limit) {
+    public List<User> findAll(Integer limit) {
         UriComponents uriComponent = UriComponentsBuilder.fromUriString(apiUrl)
             .queryParam("limit", limit)
             .build();
